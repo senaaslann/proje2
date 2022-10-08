@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/css/style.css">
+
+<body>
+<section>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="box">
+        <div class="square" style="--i:0;"></div>
+        <div class="square" style="--i:1;"></div>
+        <div class="square" style="--i:2;"></div>
+        <div class="square" style="--i:3;"></div>
+        <div class="square" style="--i:4;"></div>
+        <div class="square" style="--i:5;"></div>
+        <div class="container">
+            <div class="form">
+                <h2>Giris Sayfasi</h2>
+                <form action="dologin" method="post">
+                    <!-- // LoginMvcController da postmaping olusturulur ve atama yapilir -->
+
+                    <div class="inputBox">
+                        <label th:text="${kullanicilbl}"></label><br>
+                        <input type="text" name="name" placeholder="Username">
+                        <!--// LoginMvcController da postmaping de ki parantez icerisindeki name i bulur ve buradaki name e atar-->
+                        <label th:text="${sifrelbl}"></label><br>
+                        <input type="password" name="password" placeholder="Password">
+                        <!--// MvcController a gidiyor password u ariyor ve Password e atiyor-->
+                        <div class="inputBox">
+                            <input type="submit" value="Login">
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+</html>

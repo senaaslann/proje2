@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div th:if="${user.cinsiyet.toString()}=='KADIN'">
+<h1 style="color:pink" > Hosgeldin <span th:text= "${user.name}"/> </h1>
+    <div>
+        <img class="image" src="https://cdn.pixabay.com/photo/2013/07/02/22/20/bouquet-142876__180.jpg" style="width:300px"/>
+        <img class="image" src="https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509__180.jpg" style="width:300px"/>
+        <img class="image" src="https://randompicturegenerator.com/img/car-generator/g478676389277ddfc8c501112a4d680ca41a3169e3513c9b6ee548b51faaa2c111c02b99d35520dc5237baccec7f67be8_640.png" style="width:300px"/>
+        <img class="image" src="https://cdn.pixabay.com/photo/2016/02/17/19/08/lotus-1205631__180.jpg" style="width:300px"/>
+    </div>
+
+</div>
+<div th:if="${user.cinsiyet.toString()}=='ERKEK'">
+    <h1 style="color:blue" > Hosgeldin <span th:text= "${user.name}"/> </h1>
+    <div class="image">
+        <img class="image" src="https://randompicturegenerator.com/img/car-generator/gb3083ca3738f70532f10fe2b0b454a02e8bf975e9bdf3094163e0ec8fd210b47fda787eb6844712c77535d93e9f0f6e9_640.png" style="width:300px"/>
+        <img class="image" src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278__180.jpg" style="width:300px"/>
+        <img class="image" src="https://cdn.pixabay.com/photo/2016/04/01/12/16/car-1300629__180.png" style="width:300px"/>
+        <img class="image" src="https://cdn.pixabay.com/photo/2013/07/13/11/50/car-158795__180.png" style="width:300px"/>
+    </div>
+
+</div>
+</body>
+</html>
